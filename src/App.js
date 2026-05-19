@@ -1,23 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import BarChart from "./chart/BarChart";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
+      <BarChart
+          data={[120, 290, 113, 89]}
+          colors={["#ef4444", "#f97316", "#10b981", "#3b82f6"]}
+          labels={["ianuarie", "februarie", "martie", "aprilie"]}
+          maxValue={300}
+          yInterval={100}
+      />
     </div>
   );
 }
