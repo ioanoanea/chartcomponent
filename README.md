@@ -103,3 +103,49 @@ A complex chart that groups multiple data sets on the same axis, excellent for c
     labels={["january", "february", "March", "April"]}
 />
 ```
+# Demo
+Paste the next code inside your react App.js and see how chart components can be used
+```JavaScript
+import './App.css';
+import {BarChart, ClusterBarChart, PieChart} from "chartcomponent-io";
+
+function App() {
+  return (
+    <div className="App">
+      <BarChart
+          data={[20, 30, 15, 40]}
+          colors={["#4f46e5", "#22cddd", "#218143", "#f48428"]}
+          maxValue={50}
+          yInterval={10}
+          width={350}
+          height={300}
+          labels={["january", "february", "March", "April"]}
+      />
+      <PieChart
+        data={[20, 30, 40]}
+        colors={["#4f46e5", "#22cddd", "#218143"]}
+        labels={["january", "february", "March"]}
+        width={300}
+        height={300}
+      />
+      <ClusterBarChart
+          data={[[20, 30, 15, 40], [15, 20, 17, 34], [35, 18, 26, 4]]}
+          colors={["#4f46e5", "#22cddd", "#218143", "#f48428"]}
+          maxValue={50}
+          width={350}
+          height={300}
+          labels={["january", "february", "March", "April"]}
+      />
+    </div>
+  );
+}
+
+export default App;
+```
+
+
+<img width="1016" height="352" alt="chartcomponent-demo" src="https://github.com/user-attachments/assets/ba036e4a-683c-49d6-adfa-ed88ee9f4c8b" />
+
+
+
+
